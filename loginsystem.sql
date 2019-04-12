@@ -3,11 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 12, 2019 at 03:46 AM
+-- Generation Time: Apr 12, 2019 at 04:40 AM
 -- Server version: 8.0.15
 -- PHP Version: 7.3.3
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
