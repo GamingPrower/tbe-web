@@ -1,4 +1,5 @@
 import * as SGmail from '@sendgrid/mail';
+import { SGAPIKey } from '../config/config';
 
 // converts binary string to a hexadecimal string
 // returns an object with key 'valid' to a boolean value, indicating
@@ -78,7 +79,7 @@ const hex2bin = (s: string) => {
 		return { valid: true, result: ret };
 };
 
-SGmail.setApiKey('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');
+SGmail.setApiKey(SGAPIKey);
 
 const newUserEmail = async (email: string, subject: string, body: string): Promise<void> => {
 	const message = {
