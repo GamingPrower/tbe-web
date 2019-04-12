@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>To Do List</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Condensed" rel="stylesheet">
+	<link rel="stylesheet" href="public/styles/main.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="list">
+		<h1 class="header">#TODO</h1>
+
+		<ul class="items">
+				<% items.forEach(item => { %>
+				<li>
+					<span class="item<%= item.done ? ' done' : '' %>"><%= item.name %></span>
+						<% if (!item.done) { %>
+						<a href="/mark?as=done&item=<%= item.id %>" class="done-button">Mark as done</a>
+						<% } else { %>
+						<a href="/mark?as=notdone&item=<%= item.id %>" class="rm-button">Mark as not done</a>
+						<% } %>
+						<a href="/remove?as=remove&item=<%= item.id %>" class="rm-button">✗</a>
+				</li>
+				<% }); %>
+			
+		</ul>
+
+		<form class="item-add" action="add" method="post">
+			<input type="text" name="name" placeholder="Type a new item here." class="input" autocomplete="off" required>
+			<input type="submit" value="Add" class="submit">
+		</form>
+		<form action="logout" method="post">
+			<input type="submit" value="Logout" class="submit" name="logout-submit">
+		</form>
+	</div>
+</body>
+</html>

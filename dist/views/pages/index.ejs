@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body>
+	<% include ../partials/header %>
+
+	<div class="container">
+		<% include ../partials/jumbotron %>
+		
+		<h2>Variable</h2>
+		<p><%= tagline %></p>
+
+		<h2>Loop</h2>
+		<ul>
+			<% drinks.forEach(drink => { %>
+				<li><%= drink.name %> - <%= drink.drunkness %></li>
+			<% }); %>
+		</ul>
+
+		<% include ../partials/footer %>
+	</div>
+</body>
+</html>

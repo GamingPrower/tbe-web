@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>To Do List</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Condensed" rel="stylesheet">
+	<link rel="stylesheet" href="public/styles/main.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<main>
+		<div class="list">
+			<section class="section-default">
+				<h1 class="header">Signup</h1>
+				<form action="/signup-submit" method="post">
+				<input type="text" name="uid" class="input" placeholder="Username">
+				<input type="text" name="mail" class="input" placeholder="E-mail">
+				<input type="password" name="pwd" class="input" placeholder="Password">
+				<input type="password" name="pwdrepeat" class="input" placeholder="Confirm Password">
+				<input type="submit" value="Sign up" class="submit" name="signup-submit">
+				</form>
+
+				<h1 class="header">Login</h1>
+				<form action="login-submit" method="post">
+				<input type="text" name="uid" class="input" placeholder="Username">
+				<input type="password" name="pwd" class="input" placeholder="Password">
+				<input type="submit" value="Login" class="submit" name="login-submit">
+				</form>
+
+				<a href="/resetpasswordrequest">Forgot your password?</a>
+			</section>
+		</div>
+	</main>
+
+</body>
+</html>
