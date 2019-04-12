@@ -3,10 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 12, 2019 at 04:40 AM
+-- Generation Time: Apr 12, 2019 at 04:50 AM
 -- Server version: 8.0.15
 -- PHP Version: 7.3.3
 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -33,7 +34,7 @@ CREATE TABLE `items` (
   `user` int(11) DEFAULT NULL,
   `done` tinyint(4) DEFAULT NULL,
   `created` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `items`
@@ -64,7 +65,7 @@ CREATE TABLE `pwdreset` (
   `selector` text NOT NULL,
   `token` longtext NOT NULL,
   `expires` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -74,10 +75,10 @@ CREATE TABLE `pwdreset` (
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `uid` tinytext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `email` tinytext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `uid` tinytext CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `email` tinytext CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `pwd` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
